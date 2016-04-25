@@ -12,7 +12,7 @@ var token = "CAABhQVABjkIBAEdpjB0SsityhI0dQnWNTLKBFaZAtZC5YOeREzdDJevJFLXFonGgl6
 
 function sendTextMessage(sender, text) {
   messageData = {
-    text:text
+    text:"I know nothing"
   }
 
   request
