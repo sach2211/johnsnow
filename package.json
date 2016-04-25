@@ -1,0 +1,26 @@
+{
+  "name": "johnsnow",
+  "version": "1.0.0",
+  "description": "A sample johnsnow GOT bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sach2211/johnsnow.git"
+  },
+  "keywords": [
+    "GOT",
+    "Bot"
+  ],
+  "author": "sach11 <sachin.chopra.best.@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sach2211/johnsnow/issues"
+  },
+  "homepage": "https://github.com/sach2211/johnsnow#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
