@@ -24,7 +24,7 @@ function sendTextMessage(sender, text) {
     })
   .end( function(err, res) {
     if (err) {
-      console.log('Error sending message: ', error);
+      console.log('Error sending message: ', err);
     } else {
       console.log('Success ');
     }
