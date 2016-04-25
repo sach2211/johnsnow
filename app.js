@@ -19,6 +19,7 @@ function sendTextMessage(sender, text) {
     .post('https://graph.facebook.com/v2.6/me/messages')
     .set('access_token', token)
     .send( {
+      access_token:token,
       recipient: {id:sender},
       message: messageData,
     })
