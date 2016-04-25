@@ -55,7 +55,7 @@ app.post('/webhook/', function (req, res) {
       if (event.message && event.message.text) {
         text = event.message.text;
         console.log('The message received is ', text)
-	sendTextMessage(sender, "Text received, echo: "+ text.substring(0, 200));
+	sendTextMessage(sender, "I am John Snow "+ text.substring(0, 200));
       }
     }
   } else {
