@@ -15,6 +15,19 @@ app.get('/webhook/', function (req, res) {
     res.status(200).send('Error, wrong validation token');
 })
 
+app.post('/webhook/', function (req, res) {
+  messaging_events = req.body.entry[0].messaging;
+  for (i = 0; i < messaging_events.length; i++) {
+    event = req.body.entry[0].messaging[i];
+    sender = event.sender.id;
+    if (event.message && event.message.text) {
+      text = event.message.text;
+      console.log('The message received is ', text)
+    }
+  }
+  res.sendStatus(200);
+});
+
 app.listen(app.get('port'), function () {
   console.log('Example app listening on port ',  app.get('port'));
 });
