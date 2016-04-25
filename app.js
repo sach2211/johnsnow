@@ -7,7 +7,7 @@ app.get('/', function (req, res) {
   res.status(200).send('Hello World!');
 });
 
-app.get('/webhoo/', function (req, res) {
+app.get('/webhook/', function (req, res) {
   if (req.query && req.query['hub.verify_token'] && req.query['hub.verify_token'] === 'whitewalkers') {
     res.status(200).send(req.query['hub.challenge']);
   }
