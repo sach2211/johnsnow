@@ -8,10 +8,10 @@ app.get('/', function (req, res) {
 });
 
 app.get('/webhook/', function (req, res) {
-//  if (req.query['hub.verify_token'] === 'whitewalkers') {
-//    res.status(200).send(req.query['hub.challenge']);
-//  }
-//  else 
+  if (req.query && req.query['hub.verify_token'] && req.query['hub.verify_token'] === 'whitewalkers') {
+    res.status(200).send(req.query['hub.challenge']);
+  }
+  else 
     res.status(200).send('Error, wrong validation token');
 })
 
