@@ -7,7 +7,7 @@ app.get('/', function (req, res) {
   res.status(200).send('Hello World!');
 });
 
-app.get('/webhook/', function (req, res) {
+app.get('/webhoo/', function (req, res) {
   if (req.query && req.query['hub.verify_token'] && req.query['hub.verify_token'] === 'whitewalkers') {
     res.status(200).send(req.query['hub.challenge']);
   }
@@ -17,7 +17,7 @@ app.get('/webhook/', function (req, res) {
 
 app.post('/webhook/', function (req, res) {
   console.log("The request received is ", req)
-  if (req.body.entry && req.body.entry[0].messaging) {
+  if (req.body && req.body.entry && req.body.entry[0].messaging) {
     messaging_events = req.body.entry[0].messaging;
     for (i = 0; i < messaging_events.length; i++) {
       event = req.body.entry[0].messaging[i];
